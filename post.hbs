@@ -21,14 +21,15 @@
             <section class="post-meta">
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
             </section>
-            <section class="social-share">
-                {{> "social_share"}}
-            </section>
         </header>
 
         <section class="post-content">
             {{content}}
         </section>
+
+        <section class="post-disclaimer">
+            <strong>Disclaimer:</strong> The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.
+        </section
 
         <section class="social-share">
             {{> "social_share"}}
