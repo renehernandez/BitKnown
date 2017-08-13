@@ -1,0 +1,11 @@
+{{#if tags}}
+    {{#has tag="development"}}
+        <span title="development" class="badge badge-primary">development</span>
+    {{else}}
+        {{#foreach tags}}
+            <a href="{{url}}" title="{{name}}" class="badge badge-light">
+                {{name}}
+            </a>
+        {{/foreach}}
+    {{/has}}
+{{/if}}
