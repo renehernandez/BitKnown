@@ -1,8 +1,8 @@
-Intro
+## Intro
 
-BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) theme. A
+BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) theme.
 
-Features
+## Features
 
 Clean style (without right side menu)
 Works with Ghost upto version 1.5.2 (tested), but it should work with higher versions as well
@@ -17,16 +17,18 @@ Bootstrap css and js available
 
 I've forked and made changes on this theme for my personal blog at [bitsofknowledge](https://bitsofknowledge.net).
 
-Installation
+## Installation
 
 Installation is the same as other themes, so clone or download the content of this repo inside your Ghost content/themes/ folder.
 
+```
 # for example
 $ cd /your-ghost-root-directory
 $ git clone https://github.com/h4t0n/odin.git content/themes/odin
+```
 Restart Ghost and select BitKnown theme from your Admin Area.
 
-Configuration
+## Configuration
 
 No need to configure Prism or RRSSB buttons.
 
@@ -36,6 +38,7 @@ BitKnown comes with a default favicon generated with Real Favicon Generator. If 
 
 Disqus comments, Google Analytics and Font Awesome Home Page Social Link Icons are disabled by default, but they are easily configurable with Blog Header Code Injection inside your Ghost Admin Area.
 
+```
 <script>
 // to enable Google Analytics
 var ga_id = 'YOUR-UA-ID_HERE';
@@ -68,9 +71,10 @@ var social_link = {
 }
 
 </script>
+```
 
-Copyright & License
+## Copyright & License
 
-Released under the MIT License.
-Copyright (C) 2017 Rene Hernandez
+Released under the MIT License.  
+Copyright (C) 2017 Rene Hernandez.  
 Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Oding theme substantial portions of code)
