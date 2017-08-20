@@ -35,11 +35,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/rrssb.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
 
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
 
     <div class="site-wrapper">
 
@@ -57,9 +59,6 @@
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
