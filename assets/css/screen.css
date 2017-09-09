@@ -915,7 +915,7 @@ body.nav-opened .nav {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 80%;
+    width: 90%;
     max-width: 710px;
     margin: 4rem auto;
     padding-bottom: 4rem;
@@ -1078,11 +1078,10 @@ body:not(.post-template) .post-title {
     display: none;
 }
 
-/* Keep images centered, and allow images wider than the main
-   text column to break out. */
+/* Keep images centered. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 100%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
