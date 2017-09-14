@@ -4,17 +4,17 @@ BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) them
 
 ## Features
 
-Clean style (without right side menu)  
-Works with Ghost upto version 1.5.2 (tested), but it should work with higher versions as well  
-Fully responsive (for mobiles and tablets)  
-Include Bootstrap framework  
-Include MathJax for math writing  
-Home Page Navigation Menu Buttons  
-Google Analytics (easily configurable by code injection in the admin area)  
-Disqus comments (easily configurable by code injection in the admin area)  
-Prism Syntax Highlight (all languages supported)  
-RRSSB Extraordinary Social Sharing Buttons  
-Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)  
+* Clean style (without right side menu)  
+* Works with Ghost upto version 1.8.5 (tested), but it should work with higher versions as well  
+* Fully responsive (for mobiles and tablets)  
+* Include Bootstrap framework  
+* Include MathJax for math writing  
+* Home Page Navigation Menu Buttons  
+* Google Analytics (easily configurable by code injection in the admin area)  
+* Disqus comments (easily configurable by code injection in the admin area)  
+* Prism Syntax Highlight (all languages supported)  
+* RRSSB Extraordinary Social Sharing Buttons  
+* Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)  
 
 I've forked and made changes on this theme for my personal blog at [bitsofknowledge](https://bitsofknowledge.net).
 
@@ -25,7 +25,7 @@ Installation is the same as other themes, so clone or download the content of th
 ```
 # for example
 $ cd /your-ghost-root-directory
-$ git clone https://github.com/h4t0n/odin.git content/themes/odin
+$ git clone https://github.com/renehernandez/BitKnown.git content/themes/BitKnown
 ```
 Restart Ghost and select BitKnown theme from your Admin Area.
 
@@ -77,5 +77,5 @@ var social_link = {
 ## Copyright & License
 
 Released under the MIT License.  
-Copyright (C) 2017 Rene Hernandez.  
-Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Oding theme substantial portions of code)
+Copyright (C) 2017 Rene Hernandez for (for BitKnown theme modifications)
+Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Odin theme substantial portions of code)
