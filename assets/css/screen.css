@@ -1909,9 +1909,8 @@ body:not(.post-template) .post-title {
 
     .post-content img {
         padding: 0;
-        width: calc(100% + 32px); /* expand with to image + margins */
+        width: calc(100%); /* expand with to image + margins */
         min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
     }
 
     .post-meta {
