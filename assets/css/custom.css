@@ -160,6 +160,6 @@
 .badge {
     font-size: 13px;
 }
-pre {
+pre, pre[class*="language-"] {
   margin-bottom: 2em;
 }
