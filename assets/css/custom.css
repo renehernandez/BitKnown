@@ -157,7 +157,9 @@
     font-size: 1.3rem;
     white-space: nowrap;
 }
-
 .badge {
     font-size: 13px;
+}
+pre {
+  margin-bottom: 2em;
 }
