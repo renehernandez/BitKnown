@@ -163,3 +163,7 @@
 pre, pre[class*="language-"] {
   margin-bottom: 2em;
 }
+.subscribe-summary {
+  font-size: 1em;
+  font-weight: bold;
+}
