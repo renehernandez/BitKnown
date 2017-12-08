@@ -1499,7 +1499,6 @@ body:not(.post-template) .post-title {
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
-    position: absolute;
     display: inline-block;
     padding: 0 15px;
     border: #bfc8cd 1px solid;
@@ -1508,18 +1507,10 @@ body:not(.post-template) .post-title {
     transition: border 0.3s ease;
 }
 
-.older-posts {
-    right: 0;
-}
-
 .page-number {
     display: inline-block;
     padding: 2px 0;
     min-width: 100px;
-}
-
-.newer-posts {
-    left: 0;
 }
 
 .older-posts:hover,
