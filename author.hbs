@@ -7,8 +7,14 @@
 {{#author}}
     <header class="main-header author-head {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
         <nav class="main-nav overlay clearfix">
-            <a class="back-button icon-arrow-left" href="{{@blog.url}}"> Home</a>
-            <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/"> Subscribe</a>
+            <a class="back-button" href="{{@blog.url}}"> 
+                <span class="oi oi-chevron-left" aria-hidden="true"></span>
+                Home
+            </a>
+            <a class="subscribe-button" href="{{@blog.url}}/rss/"> 
+                <span class="oi oi-rss" aria-hidden="true"></span>
+                Subscribe
+            </a>
         </nav>
     </header>
 
@@ -23,9 +29,11 @@
             <h2 class="author-bio">{{bio}}</h2>
         {{/if}}
         <div class="author-meta">
-            {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-            {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+            {{#if location}}<span class="author-location oi oi-location" aria-hidden="true">{{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link oi oi-link-intact" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
+            <span class="author-stats">
+                <i class="oi oi-pulse" aria-hidden="true"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+            </span>
         </div>
     </section>
 {{/author}}
