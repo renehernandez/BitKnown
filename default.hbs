@@ -43,9 +43,13 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
     <div class="site-wrapper">
 
+        <div class="row">
+            <div class="col">
+                {{> "main_menu" }}
+            </div>
+        </div>
         {{! Everything else gets inserted here }}
         {{{body}}}
 
