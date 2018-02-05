@@ -5,19 +5,6 @@
 
 {{! Everything inside the #author tags pulls data from the author }}
 {{#author}}
-    <header class="main-header author-head {{#if cover_image}}" style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
-        <nav class="main-nav overlay clearfix">
-            <a class="back-button" href="{{@blog.url}}"> 
-                <span class="oi oi-chevron-left" aria-hidden="true"></span>
-                Home
-            </a>
-            <a class="subscribe-button" href="{{@blog.url}}/rss/"> 
-                <span class="oi oi-rss" aria-hidden="true"></span>
-                Subscribe
-            </a>
-        </nav>
-    </header>
-
     <section class="author-profile inner">
         {{#if feature_image}}
         <figure class="author-image">
