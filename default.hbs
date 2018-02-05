@@ -50,8 +50,18 @@
                 {{> "main_menu" }}
             </div>
         </div>
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+
+        <div class="row">
+            <div class="col">
+              {{> "left_menu"}}
+            </div>
+            <div class="col-xs-8">
+                {{! Everything else gets inserted here }}
+                {{{body}}}
+            </div>
+            <div class="col"></div>
+        </div>
+        
 
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
