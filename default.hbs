@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/left_menu.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/main_menu.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/right_menu.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/tag.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/author.css"}}" />
 
@@ -64,7 +65,9 @@
                 {{! Everything else gets inserted here }}
                 {{{body}}}
             </div>
-            <div class="col"></div>
+            <div class="col">
+              {{> "right_menu"}}
+            </div>
         </div>
         
 

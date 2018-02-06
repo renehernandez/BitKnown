@@ -1,0 +1,26 @@
+.social_link {
+  padding: 0;
+  list-style-type: none;
+}
+.social_link li {
+  display: inline;
+  font-size: 2.5rem;
+}
+.social_link li a {
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.1s ease-in-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+.social_link li a {
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.1s ease-in-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+.social_link li a {
+  color: rgba(0, 0, 0, 0.8);
+}
+.social_link li a:hover {
+  transform: scale(1.3);
+}
