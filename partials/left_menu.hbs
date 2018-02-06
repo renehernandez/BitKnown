@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col">
         <nav class="left-menu flex-column">
-            <a class="nav-link" href="{{@blog.url}}/tag/readings"> 
-                <span class="oi oi-arrow-right" aria-hidden="true"></span>
-                Readings
-            </a>
-            <a class="nav-link" href="{{@blog.url}}/tag/data-structures"> 
-                <span class="oi oi-arrow-right" aria-hidden="true"></span>
-                Data Structures
-            </a>
+            {{#get "posts" limit="all" include="tags" filter="status:published+page:true+tag:left-menu"}}
+                {{#foreach posts}}
+                    <a class="nav-link" href="{{url}}"> 
+                        <span class="oi oi-arrow-right" aria-hidden="true"></span>
+                        {{title}}
+                    </a>
+                {{/foreach}}
+            {{/get}}
         </nav>
-  </div>
+    </div>
 </div>

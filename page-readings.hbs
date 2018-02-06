@@ -1,0 +1,34 @@
+{{!< default}}
+
+{{#get "posts" limit="all" order="title asc" include="author,tags" filter="tag:readings"}}
+    <ul>
+  		{{#foreach posts}}
+      		<article class="{{post_class}}">
+              <header class="post-header">
+                  <h2 class="post-title">
+                      <a class="non-highlighted" href="{{url}}">
+                          {{{title}}}
+                      </a>
+                  </h2>
+              </header>
+              <section class="post-excerpt">
+                  <p>{{excerpt words="26"}} 
+                      <a class="non-highlighted read-more" href="{{url}}">
+                          &raquo;
+                      </a>
+                  </p>
+              </section>
+              <footer class="post-meta">
+                  {{#if author.profile_image}}
+                      <img class="author-thumb" src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin" />
+                  {{/if}}
+                  <span class="author-index">{{author}}</span>
+                  {{> "tags_loop"}}
+                  <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                      {{date format="DD MMMM YYYY"}}
+                  </time>
+              </footer>
+          </article>
+      {{/foreach}}
+    </ul>
+{{/get}}
