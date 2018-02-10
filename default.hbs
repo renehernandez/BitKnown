@@ -35,6 +35,12 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/rrssb.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/left_menu.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main_menu.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/right_menu.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/tag.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/author.css"}}" />
+
 
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
@@ -43,11 +49,27 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
     <div class="site-wrapper">
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+        <div class="row">
+            <div class="col">
+                {{> "main_menu" }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              {{> "left_menu"}}
+            </div>
+            <div class="col-8">
+                {{! Everything else gets inserted here }}
+                {{{body}}}
+            </div>
+            <div class="col">
+              {{> "right_menu"}}
+            </div>
+        </div>
+        
 
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>

@@ -6,19 +6,6 @@
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
 
-<header class="main-header post-head {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
-        <a class="back-button" href="{{@blog.url}}"> 
-            <span class="oi oi-chevron-left" aria-hidden="true"></span>
-            Home
-        </a>
-        <a class="subscribe-button" href="{{@blog.url}}/rss/">
-            <span class="oi oi-rss" aria-hidden="true"></span>
-            RSS
-        </a>
-    </nav>
-</header>
-
 <main class="content" role="main">
     <article class="{{post_class}}">
 
