@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col">
+        <nav class="left-menu flex-column">
+            {{#get "posts" limit="all" include="tags" filter="status:published+page:true+tag:left-menu"}}
+                {{#foreach posts}}
+                    <a class="nav-link" href="{{url}}"> 
+                        <span class="oi oi-arrow-right" aria-hidden="true"></span>
+                        {{title}}
+                    </a>
+                {{/foreach}}
+            {{/get}}
+        </nav>
+    </div>
+</div>

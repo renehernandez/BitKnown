@@ -6,13 +6,6 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header post-head {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if feature_image}}overlay{{/if}} clearfix">
-        <a class="back-button icon-arrow-left" href="{{@blog.url}}"> Home</a>
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/"> Subscribe</a>
-    </nav>
-</header>
-
 <main class="content" role="main">
     <article class="{{post_class}}">
 
@@ -56,8 +49,8 @@
                     <p>Read <a href="{{url}}">more posts</a> by this author.</p>
                 {{/if}}
                 <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    {{#if location}}<span class="author-location oi oi-location" aria-hidden="true">{{location}}</span>{{/if}}
+                    {{#if website}}<span class="author-link oi oi-link-intact" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
             </section>
 
