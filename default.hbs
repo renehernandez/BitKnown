@@ -49,7 +49,7 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    <div class="site-wrapper">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col">
@@ -70,14 +70,16 @@
             </div>
         </div>
         
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">
-                <a href="https://github.com/renehernandez/BitKnown">BitKnown</a> theme created by <a href="https://www.linkedin.com/in/rene-hernandez-5aabb784/">Rene Hernandez</a>. Proudly published with <a href="https://ghost.org">Ghost</a>
-            </section>
-        </footer>
-
+        <div class="row">
+            <div class="col">
+                <footer class="site-footer clearfix">
+                    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                    <section class="poweredby">
+                        <a href="https://github.com/renehernandez/BitKnown">BitKnown</a> theme created by <a href="https://www.linkedin.com/in/rene-hernandez-5aabb784/">Rene Hernandez</a>. Proudly published with <a href="https://ghost.org">Ghost</a>
+                    </section>
+                </footer>
+            </div>
+        </div>
     </div>
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
