@@ -4,8 +4,7 @@ BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) them
 
 ## Features
 
-* Clean style (without right side menu)  
-* Works with Ghost upto version 1.8.5 (tested), but it should work with higher versions as well  
+* Works with Ghost upto version 1.22.2 (tested), but it should work with higher versions as well  
 * Fully responsive (for mobiles and tablets)  
 * Include Bootstrap framework  
 * Include MathJax for math writing  
@@ -14,7 +13,8 @@ BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) them
 * Disqus comments (easily configurable by code injection in the admin area)  
 * Prism Syntax Highlight (all languages supported)  
 * RRSSB Extraordinary Social Sharing Buttons  
-* Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)  
+* Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)
+* Open Iconic set of icons
 
 I've forked and made changes on this theme for my personal blog at [bitsofknowledge](https://bitsofknowledge.net).
 
@@ -77,5 +77,5 @@ var social_link = {
 ## Copyright & License
 
 Released under the MIT License.  
-Copyright (C) 2017 Rene Hernandez for (for BitKnown theme modifications)
+Copyright (C) 2018 Rene Hernandez for (for BitKnown theme substantial modifications)
 Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Odin theme substantial portions of code)
