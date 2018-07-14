@@ -77,5 +77,5 @@ var social_link = {
 ## Copyright & License
 
 Released under the MIT License.  
-Copyright (C) 2018 Rene Hernandez for (for BitKnown theme substantial modifications)
+Copyright (C) 2018 Rene Hernandez for (for BitKnown theme substantial modifications)  
 Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Odin theme substantial portions of code)
