@@ -1,11 +1,17 @@
 {
-  "name": "BitKnown",
+  "name": "bitknown",
+  "description": "A fork from the Odin theme. It uses Open Iconic font sets, Bootstrap and adds MathJax for math writing.",
   "version": "2.1.1",
+  "license": "MIT",
   "author": {
     "name": "Rene Hernandez",
     "email": "renehr9102@gmail.com"
   },
   "config": {
     "posts_per_page": 10
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renehernandez/BitKnown.git"
   }
 }
