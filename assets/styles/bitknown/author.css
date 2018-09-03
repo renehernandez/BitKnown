@@ -1,3 +1,20 @@
+.post-head.main-header {
+  height: 65vh;
+  min-height: 180px;
+}
+
+.no-cover.post-head.main-header {
+  height: 85px;
+  min-height: 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.tag-head.main-header {
+  height: 40vh;
+  min-height: 180px;
+}
+
 .author-index {
   display: inline-block;
   margin-right: 8px;
@@ -135,4 +152,13 @@
  pagination prev/next links */
 .paged .author-profile .author-meta {
   display: none;
+}
+
+
+.author-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 9px;
+  border-radius: 100%;
 }

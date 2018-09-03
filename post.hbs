@@ -32,7 +32,7 @@
         <footer class="post-footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
-        {{#author}}
+        {{#primary_author}}
 
             {{#if primary_author.profile_image}}
             <figure class="author-image">
@@ -54,7 +54,7 @@
                 </div>
             </section>
 
-        {{/author}}
+        {{/primary_author}}
 
          {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.subscribers}}
