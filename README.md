@@ -1,10 +1,10 @@
 ## Intro
 
-BitKnown is a very simple fork of the [Odin](https://github.com/h4t0n/odin) theme.
+BitKnown is a fork of the [Odin](https://github.com/h4t0n/odin) theme.
 
 ## Features
 
-* Works with Ghost upto version 1.22.2 (tested), but it should work with higher versions as well  
+* Works with Ghost upto version 2.0.3 (tested), but it should work with higher versions as well  
 * Fully responsive (for mobiles and tablets)  
 * Include Bootstrap framework  
 * Include MathJax for math writing  
@@ -25,9 +25,9 @@ Installation is the same as other themes, so clone or download the content of th
 ```
 # for example
 $ cd /your-ghost-root-directory
-$ git clone https://github.com/renehernandez/BitKnown.git content/themes/BitKnown
+$ git clone https://github.com/renehernandez/BitKnown.git content/themes/bitknown
 ```
-Restart Ghost and select BitKnown theme from your Admin Area.
+Restart Ghost and select bitknown theme from your Admin Area.
 
 ## Configuration
 
