@@ -40,7 +40,7 @@
             </figure>
             {{/if}}
 
-            <section class="author">
+            <section class="row justify-content-center">
                 <h4><a href="{{url}}">{{name}}</a></h4>
 
                 {{#if bio}}
@@ -49,8 +49,8 @@
                     <p>Read <a href="{{url}}">more posts</a> by this author.</p>
                 {{/if}}
                 <div class="author-meta">
-                    {{#if location}}<span class="author-location oi oi-location" aria-hidden="true">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link oi oi-link-intact" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    {{#if location}}<span class="author-location fas fa-location-arrow" aria-hidden="true">{{location}}</span>{{/if}}
+                    {{#if website}}<span class="author-link fas fa-link" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
             </section>
 

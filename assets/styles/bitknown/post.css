@@ -138,6 +138,7 @@ body:not(.post-template) .post-title {
 
 .post-template .post-header {
     margin-bottom: 3.4rem;
+    text-align: center;
 }
 
 .post-template .post-title {
@@ -226,11 +227,6 @@ body:not(.post-template) .post-title {
     margin: 1rem 0;
     font-size: 1.4rem;
     line-height: 1.75em;
-}
-
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin-right: 180px;
 }
 
 .post-footer h4 a {

@@ -1,10 +1,27 @@
-<nav class="left-menu flex-column">
-    {{#get "posts" limit="all" include="tags" filter="status:published+page:true+tag:hash-left-menu"}}
-        {{#foreach posts}}
-            <a class="nav-link" href="{{url}}"> 
-                <span class="oi oi-arrow-right" aria-hidden="true"></span>
-                {{title}}
-            </a>
-        {{/foreach}}
-    {{/get}}
+<nav class="left-menu flex-column" role="presentation">
+    {{#if @blog.navigation}}
+        {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+        {{navigation}}
+    {{/if}}
+    <hr/>
+    <div class="d-none d-md-block">
+        <span>Find me on</span>
+        <ul class="social_link">
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <span>Common tags</span>
+        {{#get "tags" limit="5" include="count.posts" order="count.posts desc" }}
+            {{#foreach tags}}
+                <a class="nav-link" href="{{url}}"> 
+                    <span class="badge badge-secondary">
+                        {{name}}
+                    </span>
+                </a>
+            {{/foreach}}
+        {{/get}}
+    </div>
 </nav>

@@ -3,8 +3,8 @@
         <span title="development" class="badge badge-primary">development</span>
     {{else}}
         {{#foreach tags}}
-            <a href="{{url}}" title="{{name}}" class="badge badge-light">
-                {{name}}
+            <a href="{{url}}" title="{{name}}">
+                <span class="badge badge-secondary">{{name}}</span>
             </a>
         {{/foreach}}
     {{/has}}

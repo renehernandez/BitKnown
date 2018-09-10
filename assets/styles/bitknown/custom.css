@@ -47,10 +47,6 @@
     border-color: rgba(0, 0, 0, 0.8);
     color: rgb(0, 0, 0) !important;
 }
-
-.badge {
-    font-size: 13px;
-}
 pre, pre[class*="language-"] {
   margin-bottom: 2em;
 }
