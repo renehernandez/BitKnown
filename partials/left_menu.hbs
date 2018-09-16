@@ -1,8 +1,5 @@
 <nav class="left-menu flex-column" role="presentation">
     {{#if @blog.navigation}}
-        {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> --}}
         {{navigation}}
     {{/if}}
     <hr class="d-none d-md-block"/>
@@ -13,7 +10,7 @@
     </div>
     <hr/>
     <div>
-        <span>Common tags</span>
+        <span>Common topics</span>
         {{#get "tags" limit="5" include="count.posts" order="count.posts desc" }}
             {{#foreach tags}}
                 <a class="nav-link" href="{{url}}"> 

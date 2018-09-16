@@ -210,8 +210,6 @@ body:not(.post-template) .post-title {
 /* The author credit area after the post */
 .post-footer {
     position: relative;
-    margin: 6rem 0 0 0;
-    padding: 6rem 0 0 0;
     border-top: #EBF2F6 1px solid;
 }
 
@@ -235,31 +233,6 @@ body:not(.post-template) .post-title {
     text-decoration: underline;
 }
 
-/* Drop the share links in the space to the right.
-    Doing it like this means it's easier for the author bio
-    to be flexible at smaller screen sizes while the share
-    links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 6rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
-}
-
-.post-footer .share .icon-twitter:hover {
-    color: #55acee;
-}
-.post-footer .share .icon-facebook:hover {
-    color: #3b5998;
-}
-.post-footer .share .icon-google-plus:hover {
-    color: #dd4b39;
+.social-share {
+    width: 170px;
 }

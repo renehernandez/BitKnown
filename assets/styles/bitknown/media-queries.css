@@ -260,15 +260,6 @@
         border-bottom: #EBF2F6 1px dashed;
     }
 
-    .post-footer .share {
-        position: static;
-        width: auto;
-    }
-
-    .post-footer .share a {
-        margin: 1.4rem 0.8rem 0 0.8rem;
-    }
-
     .author-meta li {
         float: none;
         margin: 0;

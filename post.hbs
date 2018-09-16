@@ -32,13 +32,18 @@
         </div>
     </section>
 
-    <section class="row social-share">
-        <div class="col-12">
-            {{> "social_share"}}
+    <section class="row my-4">
+        <span style="display: none" class="sharingData-title">{{ title }}</span>
+        <span style="display: none" class="sharingData-url">{{ url absolute="true" }}</span>
+        <span style="display: none" class="sharingData-excerpt">{{ excerpt words="26" }}</span>
+        <div class="col">
+            <div class="social-share mx-auto">
+                {{> "social_share"}}
+            </div>
         </div>
     </section>
 
-    <footer class="post-footer">
+    <footer class="post-footer pt-5 my-5">
 
     {{! Everything inside the #author tags pulls data from the author }}
     {{#primary_author}}
