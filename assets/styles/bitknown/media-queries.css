@@ -79,24 +79,6 @@
         padding: 0;
     }
 
-    .read-next {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 4rem;
-    }
-
-    .read-next p {
-        display: none;
-    }
-
-    .read-next-story.no-cover + .read-next-story.no-cover {
-        border-top: rgba(0,0,100,0.06) 1px solid;
-        border-left: none;
-    }
-
 }
 
 
@@ -270,16 +252,6 @@
         display: none;
     }
 
-    .older-posts,
-    .newer-posts {
-        position: static;
-        margin: 10px 0;
-    }
-
-    .page-number {
-        display: block;
-    }
-
     .site-footer {
         margin-top: 3rem;
     }
@@ -307,15 +279,6 @@
 
     .paged .main-header .page-description {
         display: none;
-    }
-
-    .read-next {
-        margin-top: 2rem;
-        margin-bottom: -37px;
-    }
-
-    .read-next .post {
-        width: 100%;
     }
 
 }

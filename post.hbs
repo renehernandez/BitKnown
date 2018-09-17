@@ -6,131 +6,147 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<article class="{{post_class}}">
+<div class="row">
+    <div class="col">
+        <article class="{{post_class}}">
 
-    <header class="row post-header">
-        <div class="col-12">
-            <h1 class="post-title">{{title}}</h1>
-        </div>
-        <div class="col-12">
-            {{> "tags_loop"}}
-        </div>
-        <div class="col-12">
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">Posted {{date format="DD MMMM YYYY"}}</time> 
-        </div>
-    </header>
-
-    <section class="row post-content">
-        <div class="col-12">
-            {{content}}
-        </div>
-    </section>
-
-    <section class="row">
-        <div class="col-12">
-            <strong>Disclaimer:</strong> The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.
-        </div>
-    </section>
-
-    <section class="row my-4">
-        <span style="display: none" class="sharingData-title">{{ title }}</span>
-        <span style="display: none" class="sharingData-url">{{ url absolute="true" }}</span>
-        <span style="display: none" class="sharingData-excerpt">{{ excerpt words="26" }}</span>
-        <div class="col">
-            <div class="social-share mx-auto">
-                {{> "social_share"}}
-            </div>
-        </div>
-    </section>
-
-    <footer class="post-footer pt-5 my-5">
-
-    {{! Everything inside the #author tags pulls data from the author }}
-    {{#primary_author}}
-
-        {{#if primary_author.profile_image}}
-        <figure class="author-image">
-            <a class="img" href="{{url}}" style="background-image: url({{primary_author.profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
-        </figure>
-        {{/if}}
-
-        <section class="row justify-content-center text-center">
-            <div class="col">
-                <h4><a href="{{url}}">{{name}}</a></h4>
-
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                {{/if}}
-                <div class="author-meta">
-                    {{#if location}}<span class="author-location fas fa-location-arrow" aria-hidden="true">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link fas fa-link" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
+            <header class="row post-header">
+                <div class="col-12">
+                    <h1 class="post-title">{{title}}</h1>
                 </div>
-            </div>
-        </section>
+                <div class="col-12">
+                    {{> "tags_loop"}}
+                </div>
+                <div class="col-12">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">Posted {{date format="DD MMMM YYYY"}}</time> 
+                </div>
+            </header>
 
-    {{/primary_author}}
+            <section class="row post-content">
+                <div class="col-12">
+                    {{content}}
+                </div>
+            </section>
 
-        {{!-- Email subscribe form at the bottom of the page --}}
-    {{#if @labs.subscribers}}
-        <section class="row justify-content-center my-4">
-        <div class="col">
-            <h4 class="text-center">Ready to not miss any bit. Subscribe below!</h4>
-        </div>
-        </section>
+            <section class="row">
+                <div class="col-12">
+                    <strong>Disclaimer:</strong> The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.
+                </div>
+            </section>
 
-        <section class="row justify-content-center">
-        <div class="col-sm-10 col-md-8">
-            {{subscribe_form
-                form_class="text-center"
-                input_class="form-control form-control-lg mb-2 mr-sm-2 mb-sm-0"
-                button_class="btn btn-primary btn-lg"
-                placeholder="Your email address"}}
-        </div>
-        </section>
-    {{/if}}
+            <section class="row my-4">
+                <span style="display: none" class="sharingData-title">{{ title }}</span>
+                <span style="display: none" class="sharingData-url">{{ url absolute="true" }}</span>
+                <span style="display: none" class="sharingData-excerpt">{{ excerpt words="26" }}</span>
+                <div class="col">
+                    <div class="social-share mx-auto">
+                        {{> "social_share"}}
+                    </div>
+                </div>
+            </section>
 
-    <section class="post-comments">
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-            // required: replace example with your forum shortname
-            if(disqus_shortname && typeof disqus_shortname === "string") {
-                var disqus_identifier = '{{post.id}}';
+            <footer class="post-footer pt-5 my-5">
 
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            }
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#primary_author}}
 
-    </footer>
+                {{#if primary_author.profile_image}}
+                <figure class="author-image">
+                    <a class="img" href="{{url}}" style="background-image: url({{primary_author.profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                </figure>
+                {{/if}}
 
-</article>
+                <section class="row justify-content-center text-center">
+                    <div class="col">
+                        <h4><a href="{{url}}">{{name}}</a></h4>
 
-<aside class="read-next">
-    {{#next_post}}
-    <a class="read-next-story {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/next_post}}
-    {{#prev_post}}
-    <a class="read-next-story prev {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/prev_post}}
-</aside>
+                        {{#if bio}}
+                            <p>{{bio}}</p>
+                        {{else}}
+                            <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                        {{/if}}
+                        <div class="author-meta">
+                            {{#if location}}<span class="author-location fas fa-location-arrow" aria-hidden="true">{{location}}</span>{{/if}}
+                            {{#if website}}<span class="author-link fas fa-link" aria-hidden="true"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                        </div>
+                    </div>
+                </section>
 
+            {{/primary_author}}
+
+                {{!-- Email subscribe form at the bottom of the page --}}
+            {{#if @labs.subscribers}}
+                <section class="row justify-content-center my-4">
+                <div class="col">
+                    <h4 class="text-center">Ready to not miss any bit. Subscribe below!</h4>
+                </div>
+                </section>
+
+                <section class="row justify-content-center">
+                <div class="col-sm-10 col-md-8">
+                    {{subscribe_form
+                        form_class="text-center"
+                        input_class="form-control form-control-lg mb-2 mr-sm-2 mb-sm-0"
+                        button_class="btn btn-primary btn-lg"
+                        placeholder="Your email address"}}
+                </div>
+                </section>
+            {{/if}}
+
+                <section class="post-comments">
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                        // required: replace example with your forum shortname
+                        if(disqus_shortname && typeof disqus_shortname === "string") {
+                            var disqus_identifier = '{{post.id}}';
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        }
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </section>
+            </footer>
+        </article>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <aside>
+            {{#next_post}}
+                <a class="next-link" href="{{ url }}">
+                    <div class="row align-items-center">
+                        <div class="col-1">
+                            <i class="fas fa-angle-double-left"></i> 
+                        </div>
+                        <div class="col">
+                            <span>{{ title }}</span>
+                        </div>
+                    </div>
+                </a>
+            {{/next_post}}
+        </aside>
+    </div>
+    <div class="col">
+        <aside>
+            {{#prev_post}}
+                <a class="previous-link" href="{{ url }}">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <span>{{ title }}</span>
+                        </div>
+                        <div class="col-1">
+                            <i class="fas fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                </a>
+            {{/prev_post}}
+        </aside>
+    </div>
+</div>
 
 {{/post}}
