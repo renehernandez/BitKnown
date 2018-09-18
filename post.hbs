@@ -35,9 +35,9 @@
             </section>
 
             <section class="row my-4">
-                <span style="display: none" class="sharingData-title">{{ title }}</span>
-                <span style="display: none" class="sharingData-url">{{ url absolute="true" }}</span>
-                <span style="display: none" class="sharingData-excerpt">{{ excerpt words="26" }}</span>
+                <span class="d-none sharingData-title">{{ title }}</span>
+                <span class="d-none sharingData-url">{{ url absolute="true" }}</span>
+                <span class="d-none sharingData-excerpt">{{ excerpt words="26" }}</span>
                 <div class="col">
                     <div class="social-share mx-auto">
                         {{> "social_share"}}
@@ -94,21 +94,9 @@
             {{/if}}
 
                 <section class="post-comments">
-                        <div id="disqus_thread"></div>
-                        <script type="text/javascript">
-                        // required: replace example with your forum shortname
-                        if(disqus_shortname && typeof disqus_shortname === "string") {
-                            var disqus_identifier = '{{post.id}}';
-
-                            /* * * DON'T EDIT BELOW THIS LINE * * */
-                            (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                        }
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <span id="single-post-id" class="d-none">{{ post.id }}</span>
+                    <div id="disqus_thread"></div>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 </section>
             </footer>
         </article>
@@ -148,5 +136,5 @@
         </aside>
     </div>
 </div>
-
+<script type="text/javascript" src="{{asset "scripts/post_comments.js"}}"></script>
 {{/post}}

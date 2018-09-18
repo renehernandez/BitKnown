@@ -1,15 +1,17 @@
 <nav class="left-menu flex-column" role="presentation">
     {{#if @blog.navigation}}
-        {{navigation}}
+        <div class="d-none d-lg-block">
+            {{navigation}}
+        </div>
     {{/if}}
-    <hr class="d-none d-md-block"/>
-    <div class="d-none d-md-block">
+    <hr class="d-none d-lg-block"/>
+    <div class="d-none d-lg-block">
         <span>Find me on</span>
         <ul class="social_link">
         </ul>
     </div>
-    <hr/>
-    <div>
+    <hr class="d-none d-lg-block" />
+    <div class="d-none d-lg-block">
         <span>Common topics</span>
         {{#get "tags" limit="5" include="count.posts" order="count.posts desc" }}
             {{#foreach tags}}
