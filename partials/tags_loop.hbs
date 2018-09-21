@@ -2,10 +2,17 @@
     {{#has tag="development"}}
         <span title="development" class="badge badge-primary">development</span>
     {{else}}
-        {{#foreach tags}}
-            <a href="{{url}}" title="{{name}}" class="badge badge-light">
-                {{name}}
-            </a>
-        {{/foreach}}
+        {{#primary_tag}}
+            <a class="d-md-none" href="{{url}}" title="{{name}}">
+            <span class="badge badge-secondary">{{name}}</span>
+        </a>
+        {{/primary_tag}}
+        <div class="d-none d-md-inline">
+            {{#foreach tags}}
+                <a href="{{url}}" title="{{name}}">
+                    <span class="badge badge-secondary">{{name}}</span>
+                </a>
+            {{/foreach}}
+        </div>   
     {{/has}}
 {{/if}}
