@@ -6,23 +6,6 @@
     max-width: 960px;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-    just for the lolz and stylepoints. */
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #FFF;
-    border-radius: 100%;
-    box-shadow: #FFF 0 0 0 5px;
-}
-
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
 }
@@ -42,7 +25,6 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta {
-    display: block;
     margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
@@ -74,19 +56,11 @@ body:not(.post-template) .post-title {
 }
 
 .post-date {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
     font-size: 1.3rem;
     white-space: nowrap;
 }
 
 .reading-time {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
     font-size: 1.3rem;
     white-space: nowrap;
 }
@@ -142,16 +116,6 @@ body:not(.post-template) .post-title {
     margin-bottom: 0;
 }
 
-.post-template .post-meta {
-    margin: 0;
-}
-
-.post-template .post-date {
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-
 /* Stop elements, such as img wider than the post content, from
     creating horizontal scroll - slight hack due to imperfections
     with browser width % calculations and rounding */
@@ -163,11 +127,6 @@ body:not(.post-template) .post-title {
 .post-template .post {
     border-bottom: none;
     padding-bottom: 0;
-}
-
-/* Kill that stylish little circle that was on the border, too */
-.post-template .post:after {
-    display: none;
 }
 
 /* Keep images centered. */

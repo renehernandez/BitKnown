@@ -152,16 +152,8 @@
         line-height: 1.65em;
     }
 
-    .post-date {
-        display: none;
-    }
-
     .post-template .post-header {
         margin-bottom: 2rem;
-    }
-
-    .post-template .post-date {
-        display: inline-block;
     }
 
     p, ul, ol, dl {
@@ -224,11 +216,6 @@
         padding: 0;
         width: calc(100%); /* expand with to image + margins */
         min-width: 0;
-    }
-
-    .post-meta {
-        font-size: 1.3rem;
-        margin-top: 1rem;
     }
 
     .post-footer {
