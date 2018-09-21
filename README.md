@@ -4,17 +4,16 @@ BitKnown is a fork of the [Odin](https://github.com/h4t0n/odin) theme.
 
 ## Features
 
-* Works with Ghost upto version 2.0.3 (tested), but it should work with higher versions as well  
-* Fully responsive (for mobiles and tablets)  
-* Include Bootstrap framework  
+* Works with Ghost upto version 2.1.3 (tested), but it should work with higher versions as well  
+* Mobile first approach
+* Include Bootstrap 4 framework
 * Include MathJax for math writing  
-* Home Page Navigation Menu Buttons  
+* Left navigation menu
 * Google Analytics (easily configurable by code injection in the admin area)  
 * Disqus comments (easily configurable by code injection in the admin area)  
 * Prism Syntax Highlight (all languages supported)  
 * RRSSB Extraordinary Social Sharing Buttons  
 * Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)
-* Open Iconic set of icons
 
 I've forked and made changes on this theme for my personal blog at [bitsofknowledge](https://bitsofknowledge.net).
 
@@ -33,7 +32,7 @@ Restart Ghost and select bitknown theme from your Admin Area.
 
 No need to configure Prism or RRSSB buttons.
 
-To add Homepage Navigation Menu Buttons simply add the links in your Navigation Admin Area. They may be useful for static pages (AboutMe for example) or for shortcut to your (best) post tags.
+To add Left Navigation Menu links simply add the links in your Navigation Admin Area. They may be useful for static pages (AboutMe for example) or for shortcut to your (best) post tags.
 
 BitKnown comes with a default favicon generated with Real Favicon Generator. If you want to add your favicon you can generate your own (with Real Favicon Generator) and place downloaded files inside the assets/img/favicons BitKnown directory.
 
@@ -58,15 +57,6 @@ var social_link = {
     'twitter': 'twitter_url',
     'linkedin': 'linkedin_url',
     'github': 'github_url',
-    'rss':'your_rss_feed'
-    // you can add more icons
-}
-
-// Example2: squared social network icons
-var social_link = {
-    'twitter-square': 'twitter_url',
-    'linkedin-square': 'linkedin_url',
-    'github-square': 'github_url',
     'rss':'your_rss_feed'
     // you can add more icons
 }
