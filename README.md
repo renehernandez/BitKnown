@@ -1,4 +1,4 @@
-## Intro
+# BitKnown [![Build Status](https://travis-ci.org/renehernandez/BitKnown.svg?branch=master)](https://travis-ci.org/renehernandez/BitKnown)
 
 BitKnown is a fork of the [Odin](https://github.com/h4t0n/odin) theme.
 
