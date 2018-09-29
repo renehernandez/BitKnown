@@ -101,17 +101,16 @@ body:not(.post-template) .post-title {
     ========================================================================== */
 
 .post-template .post-header {
-    margin-bottom: 3.4rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
-
-
 
 /* Stop elements, such as img wider than the post content, from
     creating horizontal scroll - slight hack due to imperfections
     with browser width % calculations and rounding */
-.post-template .content {
+.post-template .post-content {
     overflow: hidden;
+    line-height: 2rem;
 }
 
 /* Tweak the .post wrapper style */

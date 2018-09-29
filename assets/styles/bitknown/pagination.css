@@ -1,9 +1,8 @@
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;

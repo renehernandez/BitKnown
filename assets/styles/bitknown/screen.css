@@ -60,6 +60,10 @@ h6 {
     font-size: 1rem;
 }
 
+ul, ol {
+    line-height: 2rem;
+}
+
 a.non-highlighted {
     color: #4A4A4A;
     transition: color 0.3s ease;
@@ -67,18 +71,6 @@ a.non-highlighted {
 
 a.non-highlighted:hover {
     color: #111;
-}
-
-dl dt {
-    float: left;
-    width: 180px;
-    overflow: hidden;
-    clear: left;
-    text-align: right;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 700;
-    margin-bottom: 1em;
 }
 
 code, tt {
@@ -112,49 +104,6 @@ pre code, pre tt {
     background: transparent;
     border: none;
     padding: 0;
-}
-
-table {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.75em 0;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-}
-
-table th,
-table td {
-    padding: 8px;
-    line-height: 20px;
-    text-align: left;
-    vertical-align: top;
-    border-top: #EFEFEF 1px solid;
-}
-
-table th { color: #000; }
-
-table caption + thead tr:first-child th,
-table caption + thead tr:first-child td,
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-    border-top: 0;
-}
-
-table tbody + tbody { border-top: #EFEFEF 2px solid; }
-
-table table table { background-color: #FFF; }
-
-table tbody > tr:nth-child(odd) > td,
-table tbody > tr:nth-child(odd) > th {
-    background-color: #F6F6F6;
-}
-
-table.plain tbody > tr:nth-child(odd) > td,
-table.plain tbody > tr:nth-child(odd) > th {
-    background: transparent;
 }
 
 iframe, .fluid-width-video-wrapper {
