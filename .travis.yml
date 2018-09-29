@@ -2,3 +2,12 @@ language: node_js
 sudo: false
 node_js:
   - "8"
+deploy:
+  provider: npnm
+  email: "renehr9102@gmail.com"
+  api_key: $API_TOKEN
+  on:
+    branch: master
+  on:
+    branch: develop
+    tag: next
