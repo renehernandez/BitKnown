@@ -37,7 +37,7 @@ gulp.task('css', function () {
         cssnano()
     ];
 
-    return gulp.src('assets/css/*.css')
+    return gulp.src('assets/styles/*.css')
         .on('error', swallowError)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
@@ -47,7 +47,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
+    gulp.watch('assets/styles/**', ['css']);
 });
 
 gulp.task('zip', ['css'], function () {

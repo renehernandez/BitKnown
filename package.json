@@ -1,7 +1,7 @@
 {
   "name": "bitknown",
   "description": "A programmer's friendly theme. It uses Bootstrap and adds MathJax for math writing.",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "author": {
     "name": "Rene Hernandez",
