@@ -11,15 +11,19 @@
             <p>{{ excerpt words="26" }} <a class="non-highlighted read-more" href="{{ url }}">&raquo;</a></p>
         </div>
     </section>
-    <footer class="post-meta row justify-content-start">
+    <footer class="post-meta row justify-content-start align-items-center">
         <div class="col-auto border-right border-secondary">
-            {{#if primary_author.profile_image }}
-                <img class="author-thumb" src="{{ primary_author.profile_image }}" 
-                    alt="{{ primary_author.name }}" nopin="nopin" />
-                <span class="author-index d-none d-xl-inline">{{ primary_author.name }}</span>
-            {{else}}
-                <span class="author-index">{{ primary_author.name }}</span>
-            {{/if}}
+            {{#primary_author}}
+                <a href="{{ url }}">
+                {{#if profile_image }}
+                    <img class="author-thumb" src="{{ profile_image }}" 
+                        alt="{{ name }}" nopin="nopin" />
+                     <span class="author-index d-none d-xl-inline">{{ name }}</span>
+                {{else}}
+                    <span href="{{ url }}" class="author-index">{{ name }}</span>
+                {{/if}}
+                </a>
+            {{/primary_author}}
         </div>
         <div class="col-auto border-right border-secondary">
             {{> "tags_loop" }}

@@ -1,5 +1,4 @@
 .author-index {
-  font-size: 1.3rem;
   white-space: nowrap;
 }
 
@@ -21,19 +20,7 @@
   color: #111;
 }
 
-.author-head.main-header {
-  height: 40vh;
-  min-height: 180px;
-}
-
-.no-cover.author-head.main-header {
-  height: 10vh;
-  min-height: 100px;
-  background: transparent;
-}
-
 .author-profile {
-  border-bottom: #EBF2F6 1px solid;
   text-align: center;
 }
 
@@ -94,7 +81,7 @@
 }
 
 .author-title {
-  margin: 1.5rem 0 1rem;
+  margin-top: 0;
 }
 
 .author-bio {
@@ -127,16 +114,9 @@
   text-decoration: none;
 }
 
-/* Turn off meta for page2+ to make room for extra
- pagination prev/next links */
-.paged .author-profile .author-meta {
-  display: none;
-}
-
-
 .author-thumb {
-  width: 24px;
-  height: 24px;
+  width: auto;
+  height: 1.9rem;
   float: left;
   margin-right: 9px;
   border-radius: 100%;

@@ -1,25 +1,29 @@
-## Intro
+# BitKnown [![Build Status](https://travis-ci.org/renehernandez/BitKnown.svg?branch=master)](https://travis-ci.org/renehernandez/BitKnown)
 
-BitKnown is a fork of the [Odin](https://github.com/h4t0n/odin) theme.
+BitKnown is a responsive theme focused on features to make easier to write programming posts. Originally forked from [Odin](https://github.com/h4t0n/odin)
 
 ## Features
 
-* Works with Ghost upto version 2.1.3 (tested), but it should work with higher versions as well  
-* Mobile first approach
-* Include Bootstrap 4 framework
+* Prism Syntax Highlight (all languages supported)  
 * Include MathJax for math writing  
-* Left navigation menu
+* Mobile first approach
+* Supports custom search (using [gsce](https://cse.google.com))
 * Google Analytics (easily configurable by code injection in the admin area)  
 * Disqus comments (easily configurable by code injection in the admin area)  
-* Prism Syntax Highlight (all languages supported)  
-* RRSSB Extraordinary Social Sharing Buttons  
 * Font Awesome home page Social Link Icons (easily configurable by code injection in the admin area)
+* RRSSB Extraordinary Social Sharing Buttons  
 
-I've forked and made changes on this theme for my personal blog at [bitsofknowledge](https://bitsofknowledge.net).
+This theme is currently used at [bitsofknowledge](https://bitsofknowledge.net).
+
 
 ## Installation
 
-Installation is the same as other themes, so clone or download the content of this repo inside your Ghost content/themes/ folder.
+### Node package
+
+
+### Clone the repo
+
+Clone or download the content of this repo inside your Ghost content/themes/ folder.
 
 ```
 # for example

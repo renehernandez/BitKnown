@@ -8,10 +8,6 @@
         margin-left: 0;
     }
 
-    .post {
-        font-size: 0.95em
-    }
-
     body:not(.post-template) .post-title {
         font-size: 3.2rem;
     }
@@ -60,25 +56,6 @@
     .author-profile .author-meta span {
         font-size: 1.6rem;
     }
-
-    .post-head.main-header {
-        height:45vh;
-    }
-
-    .tag-head.main-header,
-    .author-head.main-header {
-        height: 30vh;
-    }
-
-    .no-cover.post-head.main-header {
-        height: 55px;
-        padding: 0;
-    }
-
-    .no-cover.author-head.main-header {
-        padding: 0;
-    }
-
 }
 
 
@@ -161,18 +138,6 @@
         margin: 0 0 2.5rem 0;
     }
 
-    .page-title {
-        font-size: 3rem;
-    }
-
-    .post-excerpt p {
-        font-size: 0.85em;
-    }
-
-    .page-description {
-        font-size: 1.6rem;
-    }
-
     h1, h2, h3,
     h4, h5, h6 {
         margin: 0 0 0.3em 0;
@@ -247,15 +212,6 @@
         padding-bottom: 2rem;
     }
 
-    .post-head.main-header {
-        height: 30vh;
-    }
-
-    .tag-head.main-header,
-    .author-head.main-header {
-        height: 20vh;
-    }
-
     .author-profile .author-image {
         margin-top: -70px;
     }
@@ -263,9 +219,4 @@
     .author-profile .author-meta span {
         font-size: 1.4rem;
     }
-
-    .paged .main-header .page-description {
-        display: none;
-    }
-
 }

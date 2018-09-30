@@ -1,13 +1,18 @@
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    margin: 4rem auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
     word-wrap: break-word;
     max-width: 960px;
 }
 
+.post-title {
+    margin-top: 0;
+}
+
 body:not(.post-template) .post-title {
-    font-size: 3.6rem;
+    font-size: 2.2rem;
 }
 
 .post-title a {
@@ -16,7 +21,6 @@ body:not(.post-template) .post-title {
 
 .post-excerpt p {
     margin: 0;
-    font-size: 0.9em;
     line-height: 1.7em;
 }
 
@@ -27,17 +31,8 @@ body:not(.post-template) .post-title {
 .post-meta {
     margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
+    font-size: 1rem;
     color: #9EABB3;
-}
-
-.author-thumb {
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin-right: 9px;
-    border-radius: 100%;
 }
 
 .post-meta a {
@@ -56,12 +51,10 @@ body:not(.post-template) .post-title {
 }
 
 .post-date {
-    font-size: 1.3rem;
     white-space: nowrap;
 }
 
 .reading-time {
-    font-size: 1.3rem;
     white-space: nowrap;
 }
 
@@ -108,25 +101,34 @@ body:not(.post-template) .post-title {
     ========================================================================== */
 
 .post-template .post-header {
-    margin-bottom: 3.4rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-}
-
-.post-template .post-title {
-    margin-bottom: 0;
 }
 
 /* Stop elements, such as img wider than the post content, from
     creating horizontal scroll - slight hack due to imperfections
     with browser width % calculations and rounding */
-.post-template .content {
+.post-template .post-content {
     overflow: hidden;
+    line-height: 2rem;
 }
 
 /* Tweak the .post wrapper style */
 .post-template .post {
     border-bottom: none;
     padding-bottom: 0;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 920px;
+}
+
+.post-template .post-content > p:first-child {
+    font-size: 1.25em;
+    line-height: 1.5em;
 }
 
 /* Keep images centered. */
