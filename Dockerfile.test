@@ -1,0 +1,15 @@
+FROM node:10
+
+LABEL mantainer "renehernandez"
+
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+
+USER node
+RUN mkdir ~/.npm-global \
+    && mkdir ~/app \
+    && npm install -g yarn
+
+WORKDIR /home/node/app
+
+COPY . ./
+RUN yarn install --no-cache

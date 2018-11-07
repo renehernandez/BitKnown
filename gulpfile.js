@@ -25,7 +25,6 @@ var swallowError = function swallowError(error) {
 gulp.task('build', ['css', 'js'], function (/* cb */) {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
 
     return gulp.src([
         '**',
@@ -34,6 +33,7 @@ gulp.task('build', ['css', 'js'], function (/* cb */) {
         '!dist', 
         '!dist/**',
         '!Dockerfile',
+        '.dockerignore',
         '!.gitignore',
         '!gulpfile.js',
         '!yarn.lock',
