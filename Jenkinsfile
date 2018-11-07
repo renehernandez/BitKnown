@@ -24,7 +24,7 @@ timestamps {
                 sh "docker run --rm bitknown_test yarn test"
             }
 
-            stage('Get Version')   
+            stage('Get Version') {
                 def testImage = docker.image("bitknown_test") 
                 
                 testImage.inside {
@@ -48,9 +48,7 @@ timestamps {
                         }
                     }
                 }
-            }
-    
-           
+            }    
         }
         finally {
             sh "docker rmi bitknown_test"
