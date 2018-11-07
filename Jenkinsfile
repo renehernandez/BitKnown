@@ -30,9 +30,9 @@ timestamps {
     
             stage('Publish to DockerHub') {
                 docker.withRegistry('', 'dockerhub') {
-                    def image = docker.build("renehr9102/bitknown_ghost:${version}.${env.BUILD_ID}")
+                    def image = docker.build("renehr9102/bitknown_ghost:${formatVersion(version)}")
                     image.push()
-                    
+
                     if (isReleaseVersion()) {
                         image.push('latest')
                     }
@@ -41,7 +41,11 @@ timestamps {
         }
         finally {
             sh "docker rmi bitknown_test"
-            sh "docker rmi bitknown_ghost"
+
+            if (version) {
+                sh "docker rmi renehr9102/bitknown_ghost"
+                sh "docker rmi renehr9102/bitknown_ghost:${formatVersion(version)}"
+            }
         }
     }
 }
