@@ -12,9 +12,9 @@ def formatVersion(def version) {
 timestamps {
     node('master') {
         checkout scm
+        def version = ''
 
         try{
-            def version = ''
             stage('Test') {
                 def testDockerfile = 'Dockerfile.test'
                 sh "docker build -f ${testDockerfile} -t bitknown_test ./"
