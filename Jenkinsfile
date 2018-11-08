@@ -50,14 +50,13 @@ timestamps {
                 }
 
                 stage("Publish to npm") {
-                        image.inside {
-                            withEnv(["NPM_TOKEN=${credentials('npm-token')}"]) {
-                                sh "cd /var/lib/ghost/content/themes/BitKnown && yarn publish --non-interactive"
-                            }
+                    image.inside {
+                        withEnv(["NPM_TOKEN=${credentials('npm-token')}"]) {
+                            sh "cd /var/lib/ghost/content/themes/BitKnown && yarn publish --non-interactive"
                         }
                     }
                 }
-            }    
+            }
         }
         finally {
             sh "docker rmi bitknown_test"
