@@ -1,0 +1,6 @@
+node_modules
+Dockerfile*
+.dockerignore
+Jenkinsfile
+.travis.yml
+yarn.lock

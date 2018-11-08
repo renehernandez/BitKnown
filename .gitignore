@@ -20,3 +20,4 @@ projectFilesBackup
 
 .DS_Store
 *.code-workspace
+dist/

@@ -1,3 +1,16 @@
+## [3.0.2] - 2018-11-08
+
+### Added 
+
+* Publish docker image with bitknown included in ghost
+
+
+## [3.0.1] - 2018-09-30
+
+### Changed
+
+* Lower font for blog description and site footer
+
 ## [3.0.0] - 2018-08-28
 
 ### Added
