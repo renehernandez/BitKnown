@@ -48,13 +48,6 @@ timestamps {
                         }
                     }
                 }
-
-                stage("Publish to npm") {
-                    def npm_token = credentials('npm-token')
-                    image.inside {
-                        sh "cd /var/lib/ghost/content/themes/BitKnown && '//registry.npmjs.org/:_authToken=${npm_token}' > .npmrc && yarn publish --non-interactive"
-                    }
-                }
             }
         }
         finally {
