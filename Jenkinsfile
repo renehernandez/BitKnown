@@ -50,10 +50,9 @@ timestamps {
                 }
 
                 stage("Publish to npm") {
+                    def npm_token = credentials('npm-token')
                     image.inside {
-                        withEnv(["NPM_TOKEN=${credentials('npm-token')}"]) {
-                            sh "cd /var/lib/ghost/content/themes/BitKnown && yarn publish --non-interactive"
-                        }
+                        sh "cd /var/lib/ghost/content/themes/BitKnown && '//registry.npmjs.org/:_authToken=${npm_token}' > .npmrc && yarn publish --non-interactive"
                     }
                 }
             }
