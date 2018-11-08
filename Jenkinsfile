@@ -37,13 +37,22 @@ timestamps {
                 def formattedVersion = formatVersion(version)
                 def image = docker.build("renehr9102/bitknown_ghost:$formattedVersion")
 
-                 stage("Publish image with tag $formattedVersion") {
+                stage("Publish image with tag $formattedVersion") {
                     docker.withRegistry('', 'dockerhub') {
                         image.push()
 
                         if (isReleaseVersion()) {
                             stage('Update latest tag') {
                                 image.push('latest')
+                            }
+                        }
+                    }
+                }
+
+                stage("Publish to npm") {
+                        image.inside {
+                            withEnv(["NPM_TOKEN=${credentials('npm-token')}"]) {
+                                sh "cd /var/lib/ghost/content/themes/BitKnown && yarn publish --non-interactive"
                             }
                         }
                     }
