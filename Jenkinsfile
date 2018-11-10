@@ -58,6 +58,7 @@ timestamps {
 
             if (version) {
                 sh "docker rmi $productionImageName:${formatVersion(version)}"
+                sh "docker rmi $productionImageName:latest"
             }
         }
     }
