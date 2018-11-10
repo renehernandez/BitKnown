@@ -9,8 +9,8 @@ def formatVersion(def version) {
     return "${version}"
 }
 
-def productionImage = "renehr9102/bitknown_ghost"
-def testImage = "bitknown_test"
+def productionImageName = "renehr9102/bitknown_ghost"
+def testImageName = "bitknown_test"
 
 timestamps {
     node('master') {
@@ -20,15 +20,15 @@ timestamps {
         try{
             def testDockerfile = 'Dockerfile.test'
             stage('Build Test Image') {
-                sh "docker build -f ${testDockerfile} -t $testImage ./"
+                sh "docker build -f ${testDockerfile} -t $testImageName ./"
             }
 
             stage('Run Tests') {
-                sh "docker run --rm $testImage yarn test"
+                sh "docker run --rm $testImageName yarn test"
             }
 
             stage('Get Version') {
-                def testImage = docker.image(testImage) 
+                def testImage = docker.image(testImageName) 
                 
                 testImage.inside {
                     def packageJSON = readJSON file: 'package.json'
@@ -38,7 +38,7 @@ timestamps {
 
             stage('Build Production Image') {
                 def formattedVersion = formatVersion(version)
-                def image = docker.build("$productionImage:$formattedVersion")
+                def image = docker.build("$productionImageName:$formattedVersion")
 
                 stage("Publish image with tag $formattedVersion") {
                     docker.withRegistry('', 'dockerhub') {
@@ -54,10 +54,10 @@ timestamps {
             }
         }
         finally {
-            sh "docker rmi $testImage"
+            sh "docker rmi $testImageName"
 
             if (version) {
-                sh "docker rmi $productionImage:${formatVersion(version)}"
+                sh "docker rmi $productionImageName:${formatVersion(version)}"
             }
         }
     }
