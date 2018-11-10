@@ -6,8 +6,11 @@ def formatVersion(def version) {
     if (!isReleaseVersion()) {
         return "${version}-${env.BRANCH_NAME}${env.BUILD_ID}"
     }
-    return "${version}.${env.BUILD_ID}"
+    return "${version}"
 }
+
+def productionImageName = "renehr9102/bitknown_ghost"
+def testImageName = "bitknown_test"
 
 timestamps {
     node('master') {
@@ -17,15 +20,15 @@ timestamps {
         try{
             def testDockerfile = 'Dockerfile.test'
             stage('Build Test Image') {
-                sh "docker build -f ${testDockerfile} -t bitknown_test ./"
+                sh "docker build -f ${testDockerfile} -t $testImageName ./"
             }
 
             stage('Run Tests') {
-                sh "docker run --rm bitknown_test yarn test"
+                sh "docker run --rm $testImageName yarn test"
             }
 
             stage('Get Version') {
-                def testImage = docker.image("bitknown_test") 
+                def testImage = docker.image(testImageName) 
                 
                 testImage.inside {
                     def packageJSON = readJSON file: 'package.json'
@@ -35,7 +38,7 @@ timestamps {
 
             stage('Build Production Image') {
                 def formattedVersion = formatVersion(version)
-                def image = docker.build("renehr9102/bitknown_ghost:$formattedVersion")
+                def image = docker.build("$productionImageName:$formattedVersion")
 
                 stage("Publish image with tag $formattedVersion") {
                     docker.withRegistry('', 'dockerhub') {
@@ -51,10 +54,10 @@ timestamps {
             }
         }
         finally {
-            sh "docker rmi bitknown_test"
+            sh "docker rmi $testImageName"
 
             if (version) {
-                sh "docker rmi renehr9102/bitknown_ghost:${formatVersion(version)}"
+                sh "docker rmi $productionImageName:${formatVersion(version)}"
             }
         }
     }
