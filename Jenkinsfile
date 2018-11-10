@@ -54,7 +54,7 @@ timestamps {
             }
         }
         finally {
-            sh "docker rmi $testImageName"
+            sh "docker rmi $testImageName:latest"
 
             if (version) {
                 sh "docker rmi $productionImageName:${formatVersion(version)}"
