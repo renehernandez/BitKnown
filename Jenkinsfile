@@ -54,11 +54,13 @@ timestamps {
             }
         }
         finally {
-            sh "docker rmi $testImageName:latest"
+            stage("Cleanup images") {
+                sh "docker rmi $testImageName:latest"
 
-            if (version) {
-                sh "docker rmi $productionImageName:${formatVersion(version)}"
-                sh "docker rmi $productionImageName:latest"
+                if (version) {
+                    sh "docker rmi $productionImageName:${formatVersion(version)}"
+                    sh "docker rmi $productionImageName:latest"
+                }
             }
         }
     }
