@@ -3,7 +3,7 @@
   "description": "A programmer's friendly theme. It uses Bootstrap and adds MathJax for math writing.",
   "version": "3.0.3",
   "engines": {
-    "ghost": ">=2.0.0"
+    "ghost-api": "v2"
   },
   "license": "MIT",
   "author": {
