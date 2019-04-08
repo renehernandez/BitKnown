@@ -1,6 +1,16 @@
+## [3.0.4] - 2019-04-08
+
+### Fixed
+
+* New compatibility rule from gscan: Usage of **@site** instead of **@blog** 
+
+### Updated
+
+* Use ghost version 2.19.3 for docker image
+
 ## [3.0.3] - 2019-02-19
 
-### Changed
+### Updated
 
 * Use ghost version 2.14.3 for docker image
 

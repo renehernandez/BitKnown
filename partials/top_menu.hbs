@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
-    {{#if @blog.logo}}
+    {{#if @site.logo}}
         <a class="navbar-brand" href="/">
-            <img src="{{@blog.logo}}" alt="{{@blog.title}}" height="35"/>
+            <img src="{{@site.logo}}" alt="{{@site.title}}" height="35"/>
         </a>
     {{/if}}
-    <span class="navbar-text d-none d-md-inline blog-description">{{@blog.description}}</span>
+    <span class="navbar-text d-none d-md-inline blog-description">{{@site.description}}</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsedNavigation" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsedNavigation">
-        {{#if @blog.navigation}}
+        {{#if @site.navigation}}
             <div class="navbar-nav mr-auto d-lg-none">
                 {{navigation}}
             </div>
