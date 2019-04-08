@@ -15,17 +15,16 @@ BitKnown is a responsive theme focused on features to make easier to write progr
 
 This theme is currently used at [bitsofknowledge](https://bitsofknowledge.net).
 
-
 ## Installation
 
-### Node package
+### Docker 
 
 
 ### Clone the repo
 
 Clone or download the content of this repo inside your Ghost content/themes/ folder.
 
-```
+```bash
 # for example
 $ cd /your-ghost-root-directory
 $ git clone https://github.com/renehernandez/BitKnown.git content/themes/bitknown
@@ -42,7 +41,7 @@ BitKnown comes with a default favicon generated with Real Favicon Generator. If 
 
 Disqus comments, Google Analytics and Font Awesome Home Page Social Link Icons are disabled by default, but they are easily configurable with Blog Header Code Injection inside your Ghost Admin Area.
 
-```
+```javascript
 <script>
 // to enable Google Analytics
 var ga_id = 'YOUR-UA-ID_HERE';
