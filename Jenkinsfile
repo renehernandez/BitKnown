@@ -63,8 +63,8 @@ timestamps {
                         sh "docker rmi $productionImageName:latest"
                     }
                 }
-                catch {
-                    
+                catch (Exception e) {
+
                 }
             }
         }
