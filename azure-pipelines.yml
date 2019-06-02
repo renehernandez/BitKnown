@@ -12,6 +12,7 @@ resources:
 
 variables:
   vmImageName: 'ubuntu-latest'
+  testImageName: bitknown_test
 
 stages:
   - stage: Test
@@ -22,13 +23,7 @@ stages:
         vmImage: $(vmImageName)
 
       steps:
-      - task: Docker@2
-        displayName: 'Run gscan tests in container'
-        inputs:
-          command: build
-          Dockerfile: ./Dockerfile.test
-          tags: |
-            bitknown_test
-      - script: docker run --rm bitknown_test yarn test
+      - script: |
+          docker build -f ./Dockerfile.test -t $(testImageName) .
+          docker run --rm $(testImageName) yarn test
 
-          
