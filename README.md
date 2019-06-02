@@ -1,4 +1,4 @@
-# BitKnown [![Build Status](https://travis-ci.org/renehernandez/BitKnown.svg?branch=master)](https://travis-ci.org/renehernandez/BitKnown)
+# BitKnown 
 
 BitKnown is a responsive theme focused on features to make easier to write programming posts. Originally forked from [Odin](https://github.com/h4t0n/odin)
 
@@ -17,7 +17,17 @@ This theme is currently used at [bitsofknowledge](https://bitsofknowledge.net).
 
 ## Installation
 
-### Docker 
+The following section explains different ways to get the theme
+
+### Docker
+
+Pull the docker image from the central docker registy:
+
+```bash
+docker pull bitknown_ghost
+```
+
+Or if using `docker compose` you can check the example at [bok_docker](https://github.com/renehernandez/bok_docker/blob/master/blog.compose.yml)
 
 
 ### Clone the repo
@@ -69,6 +79,4 @@ var social_link = {
 
 ## Copyright & License
 
-Released under the MIT License.  
-Copyright (C) 2018 Rene Hernandez for (for BitKnown theme substantial modifications)  
-Copyright (c) 2016 Andrea Tarquini aka @h4ton (for Odin theme substantial portions of code)
+See [License](LICENSE)

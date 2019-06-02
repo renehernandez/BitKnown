@@ -4,3 +4,4 @@ Dockerfile*
 Jenkinsfile
 .travis.yml
 yarn.lock
+*.md
