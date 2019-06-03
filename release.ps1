@@ -34,7 +34,7 @@ $packagePath = Join-Path -Path $PSScriptRoot -ChildPath 'package.json'
 
 $version = (Get-Content -Path $packagePath -Raw | ConvertFrom-Json).Version
 
-$formattedVersion = Format-Version -Version $version -Branch $env:Build_SourceBranchName -Build $env:Build_BuildNumber
+$formattedVersion = Format-Version -Version $version -Branch $env:BUILD_SOURCEBRANCHNAME -Build $env:BUILD_BUILDNUMBER 
 
 $versionedImageName = "bitknown_ghost:$formattedVersion"
 docker build -t "$($env:DockerId)/$versionedImageName" .
@@ -43,6 +43,6 @@ docker login -u $env:DockerId -p $env:DockerPassword
 
 docker push "$($env:DockerId)/$versionedImageName"
 
-if ($env:Build_SourceBranchName -eq 'master') {
+if ($env:BUILD_SOURCEBRANCHNAME -eq 'master') {
     docker tag "$($env:DockerId)/$versionedImageName" "$($env:DockerId)/bitknown_ghost:latest"
 }
