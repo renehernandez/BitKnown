@@ -34,7 +34,7 @@ $packagePath = Join-Path -Path $PSScriptRoot -ChildPath 'package.json'
 
 $version = (Get-Content -Path $packagePath -Raw | ConvertFrom-Json).Version
 
-$formattedVersion = Format-Version -Version $version -Branch -Branch $env:Build_SourceBranchName -Build $env:Build_BuildNumber
+$formattedVersion = Format-Version -Version $version -Branch $env:Build_SourceBranchName -Build $env:Build_BuildNumber
 
 $versionedImageName = "bitknown_ghost:$formattedVersion"
 docker build -t "$($env:DockerId)/$versionedImageName" .
