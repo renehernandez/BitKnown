@@ -39,5 +39,5 @@ stages:
         inputs:
           filePath: ./release.ps1
         env:
-          dockerId: $(dockerId)
-          dockerPassword: $(dockerPassword)
+          Docker_Id: $(dockerId)
+          Docker_Password: $(dockerPassword)

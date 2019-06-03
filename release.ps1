@@ -38,16 +38,16 @@ $formattedVersion = Format-Version -Version $version -Branch $env:BUILD_SOURCEBR
 
 $versionedImageName = "bitknown_ghost:$formattedVersion"
 
-Write-Host "Building image: $versionImageName"
-docker build -t "$($env:DockerId)/$versionedImageName" .
+Write-Host "Building image: $versionedImageName"
+docker build -t "$($env:DOCKER_ID)/$versionedImageName" .
 
 Write-Host "Log ing to docker hub"
-docker login -u $env:DockerId -p $env:DockerPassword
+docker login -u $env:DOCKER_ID -p $env:DOCKER_PASSWORD
 
 Write-Host "Push image"
-docker push "$($env:DockerId)/$versionedImageName"
+docker push "$($env:DOCKER_ID)/$versionedImageName"
 
 if ($env:BUILD_SOURCEBRANCHNAME -eq 'master') {
     Write-Host "Push latest tag"
-    docker tag "$($env:DockerId)/$versionedImageName" "$($env:DockerId)/bitknown_ghost:latest"
+    docker tag "$($env:DOCKER_ID)/$versionedImageName" "$($env:DockerId)/bitknown_ghost:latest"
 }
