@@ -1,3 +1,9 @@
+## [3.0.5] - 2019-06-12
+
+### Changed
+
+* Switch to use Azure Devops for build and release
+
 ## [3.0.4] - 2019-04-08
 
 ### Fixed

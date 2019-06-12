@@ -1,0 +1,39 @@
+trigger:
+- azure-pipelines
+
+
+resources:
+  - repo: self
+
+
+variables:
+  vmImageName: 'ubuntu-latest'
+
+
+stages:
+  - stage: Test
+    displayName: 'Run gscan'
+    jobs:
+    - job: Test
+      pool:
+        vmImage: $(vmImageName)
+
+      steps:
+      - task: PowerShell@2
+        inputs:
+          filePath: ./test.ps1
+          
+  - stage: BuildAndRelease
+    displayName: 'Build and release'
+    jobs:
+    - job: BuildAndRelease
+      pool:
+        vmImage: $(vmImageName)
+      
+      steps:
+      - task: PowerShell@2
+        inputs:
+          filePath: ./release.ps1
+        env:
+          DOCKER_ID: $(dockerId)
+          DOCKER_PASSWORD: $(dockerPassword)
