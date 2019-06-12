@@ -1,4 +1,4 @@
-# BitKnown 
+# BitKnown
 
 BitKnown is a responsive theme focused on features to make easier to write programming posts. Originally forked from [Odin](https://github.com/h4t0n/odin)
 
@@ -29,7 +29,6 @@ docker pull bitknown_ghost
 
 Or if using `docker compose` you can check the example at [bok_docker](https://github.com/renehernandez/bok_docker/blob/master/blog.compose.yml)
 
-
 ### Clone the repo
 
 Clone or download the content of this repo inside your Ghost content/themes/ folder.
@@ -39,6 +38,7 @@ Clone or download the content of this repo inside your Ghost content/themes/ fol
 $ cd /your-ghost-root-directory
 $ git clone https://github.com/renehernandez/BitKnown.git content/themes/bitknown
 ```
+
 Restart Ghost and select bitknown theme from your Admin Area.
 
 ## Configuration

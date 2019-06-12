@@ -1,3 +1,9 @@
+## [3.0.6] - 2019-06-12
+
+### Changed
+
+* Installation docs include how-to using docker
+
 ## [3.0.5] - 2019-06-12
 
 ### Changed
