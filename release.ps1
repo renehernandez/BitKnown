@@ -19,7 +19,7 @@ function Format-Version
 
     try {
         if ($Branch -ne 'master') {
-            "$Version-$($Branch)$Build"
+            "$Version-$($Branch)b$Build"
         }
         else {
             $Version
@@ -34,7 +34,7 @@ $packagePath = Join-Path -Path $PSScriptRoot -ChildPath 'package.json'
 
 $version = (Get-Content -Path $packagePath -Raw | ConvertFrom-Json).Version
 
-$formattedVersion = Format-Version -Version $version -Branch $env:BUILD_SOURCEBRANCHNAME -Build $env:BUILD_BUILDNUMBER 
+$formattedVersion = Format-Version -Version $version -Branch $env:BUILD_SOURCEBRANCHNAME -Build $env:BUILD_BUILDID
 
 $versionedImageName = "bitknown_ghost:$formattedVersion"
 
