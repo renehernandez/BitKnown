@@ -1,5 +1,5 @@
-trigger:
-- azure-pipelines
+pr:
+  - master
 
 
 resources:
