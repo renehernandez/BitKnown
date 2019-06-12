@@ -49,5 +49,5 @@ docker push "$($env:DOCKER_ID)/$versionedImageName"
 
 if ($env:BUILD_SOURCEBRANCHNAME -eq 'master') {
     Write-Host "Push latest tag"
-    docker tag "$($env:DOCKER_ID)/$versionedImageName" "$($env:DockerId)/bitknown_ghost:latest"
+    docker tag "$($env:DOCKER_ID)/$versionedImageName" "$($env:DOCKER_ID)/bitknown_ghost:latest"
 }

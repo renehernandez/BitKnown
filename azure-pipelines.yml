@@ -10,9 +10,10 @@ trigger:
 resources:
   - repo: self
 
+
 variables:
   vmImageName: 'ubuntu-latest'
-  testImageName: 
+
 
 stages:
   - stage: Test
@@ -39,5 +40,5 @@ stages:
         inputs:
           filePath: ./release.ps1
         env:
-          Docker_Id: $(dockerId)
-          Docker_Password: $(dockerPassword)
+          DOCKER_ID: $(dockerId)
+          DOCKER_PASSWORD: $(dockerPassword)
