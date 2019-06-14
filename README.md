@@ -24,7 +24,7 @@ The following section explains different ways to get the theme
 Pull the docker image from the central docker registy:
 
 ```bash
-docker pull bitknown_ghost
+docker pull renehr9102/bitknown_ghost
 ```
 
 Or if using `docker compose` you can check the example at [bok_docker](https://github.com/renehernandez/bok_docker/blob/master/blog.compose.yml)
