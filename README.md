@@ -1,4 +1,4 @@
-# BitKnown
+# BitKnown [![Build Status](https://dev.azure.com/renehr9102/renehr9102/_apis/build/status/renehernandez.BitKnown?branchName=master)](https://dev.azure.com/renehr9102/renehr9102/_build/latest?definitionId=1&branchName=master)
 
 BitKnown is a responsive theme focused on features to make easier to write programming posts. Originally forked from [Odin](https://github.com/h4t0n/odin)
 
