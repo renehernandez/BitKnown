@@ -14,7 +14,7 @@ RUN yarn install --no-cache --frozen-lockfile
 
 RUN yarn build
 
-FROM ghost:2.19.3
+FROM ghost:2.23.4
 
 LABEL mantainer "renehernandez"
 

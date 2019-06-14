@@ -1,4 +1,11 @@
-## [3.0.6] - 2019-06-12
+## [3.1.0] - 2019-06-14
+
+### Updated
+
+* Ghost version bumped to 2.23.4
+* Gscan version bumped to 2.6.0
+
+## [3.0.6] - 2019-06-14
 
 ### Changed
 
